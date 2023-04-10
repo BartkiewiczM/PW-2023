@@ -1,0 +1,11 @@
+.btn-custom {
+  @apply bg-white text-gray-700 py-2.5 rounded-lg text-sm shadow-sm font-normal text-center inline-flex items-center justify-center;
+}
+
+.btn-custom:hover {
+  @apply bg-gray-100 shadow-md;
+}
+
+.btn-custom:focus {
+  @apply bg-gray-200 ring-2 ring-gray-400 ring-opacity-50;
+}

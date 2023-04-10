@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_scope :user do
+    get '/login', to: redirect('/users/auth/google_oauth2'), as: :login
+  end
+
+  root to: 'home#index'
+  # Other routes go here
 end
