@@ -1,0 +1,3 @@
+// app/views/opportunities/edit.js.erb
+document.querySelector('#editOpportunityModal .modal-body').innerHTML = '<%= j(render("form", opportunity: @opportunity)) %>';
+new bootstrap.Modal(document.getElementById('editOpportunityModal')).show();

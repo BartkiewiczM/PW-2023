@@ -1,0 +1,7 @@
+<!-- app/views/projects/_new_project_form.html.erb -->
+<%= form_for project, url: projects_path, html: { id: 'add-project-form' } do |f| %>
+  <div class="bg-white p-4 rounded-lg shadow">
+    <%= f.text_field :name, class: 'form-control mb-2', placeholder: 'Project name', autocomplete: 'off' %>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+  </div>
+<% end %>

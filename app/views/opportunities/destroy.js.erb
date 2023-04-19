@@ -1,0 +1,2 @@
+const opportunityElement = document.querySelector(`.delete-opportunity-button[href="${location.origin + '/opportunities/' + <%= @opportunity.id %>}"]`).closest('.bg-white');
+opportunityElement.remove();

@@ -1,0 +1,10 @@
+<!-- app/views/projects/_project.html.erb -->
+<div id="project-<%= project.id %>" class="bg-white p-4 rounded-lg shadow relative">
+  <h3 class="text-lg font-semibold mb-2"><%= project.name %></h3>
+
+  <div class="absolute bottom-2 right-2">
+    <%= button_to project_path(project), method: :delete, form: { "data-turbo-action": "replace", "data-turbo-confirm": "Are you sure you want to delete this project?" }, class: "delete-project-button bg-transparent border-none p-0" do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+  </div>
+</div>

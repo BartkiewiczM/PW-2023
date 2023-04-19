@@ -5,6 +5,11 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  resources :opportunities
+  resources :ideas
+  resources :experiments
+  resources :projects
+
   devise_scope :user do
     get '/login', to: redirect('/users/auth/google_oauth2'), as: :login
   end

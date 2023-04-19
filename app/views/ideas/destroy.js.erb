@@ -1,0 +1,3 @@
+// app/views/ideas/destroy.js.erb
+const ideaElement = document.querySelector(`.delete-idea-button[href="${location.origin + '/ideas/' + <%= @idea.id %>}"]`).closest('.bg-white');
+ideaElement.remove();
